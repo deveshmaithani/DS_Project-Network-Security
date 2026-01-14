@@ -5,8 +5,8 @@ on:
       -'README.md'
 
 jobs:
-  integration:
-    name: Continuous integration
+  Integration:
+    name: Continuous Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -20,7 +20,7 @@ jobs:
 
   Build-and-push-ecr-image:
     name: Continuous Deployment
-    needs: integration
+    needs: Integration
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
